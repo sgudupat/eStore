@@ -25,7 +25,8 @@
             android:layout_alignParentTop="true"
             android:layout_margin="3dp"
             android:clickable="true"
-            android:src="@drawable/profile" />
+            android:src="@drawable/profile"
+            android:onClick="PestoreProfile" />
     </LinearLayout>
 
     <RelativeLayout
@@ -52,7 +53,8 @@
             android:layout_below="@+id/payment_radioGroup"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="17dp"
-            android:text="Proceed To Payment" />
+            android:text="Proceed To Payment"
+            android:onClick="OrderSummary" />
 
         <RadioGroup
             android:id="@+id/payment_radioGroup"

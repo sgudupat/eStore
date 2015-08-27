@@ -7,8 +7,8 @@
         android:id="@+id/profile_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/profile_companyname"
@@ -152,7 +152,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/pincode"
             android:layout_centerHorizontal="true"
+            android:onClick="StoreActivity"
             android:text="Update" />
-
     </RelativeLayout>
- </RelativeLayout>
+
+</RelativeLayout>

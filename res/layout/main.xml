@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:onClick="store"
+                android:onClick="signin"
                 android:layout_marginTop="35dp"
                 android:text="SignIn" />
 
@@ -82,7 +82,7 @@
                 android:layout_below="@+id/home_signin"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="23dp"
-                android:onClick="register"
+                android:onClick="EstoreRegister"
                 android:text="Register" />
 
             <TextView
@@ -92,7 +92,8 @@
                 android:layout_below="@+id/home_register"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="36dp"
-                android:text="Forget Password" />
+                android:text="Forget Password"
+                android:onClick="EstoreForgotPassword" />
 
         </RelativeLayout>
 

@@ -24,7 +24,8 @@
             android:layout_alignParentTop="true"
             android:layout_margin="3dp"
             android:clickable="true"
-            android:src="@drawable/profile" />
+            android:src="@drawable/profile"
+            android:onClick="OestoreProfile" />
 
     </LinearLayout>
 
@@ -79,7 +80,8 @@
              android:layout_below="@+id/os_layout3"
              android:layout_marginRight="18dp"
              android:layout_marginTop="19dp"
-             android:text="Shop Now" />
+             android:text="Shop Now"
+             android:onClick="StoreProduct" />
 
      </RelativeLayout>
 

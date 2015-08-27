@@ -25,6 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_margin="3dp"
             android:clickable="true"
+            android:onClick="EstoreProfile"
             android:src="@drawable/profile" />
     </LinearLayout>
 
@@ -118,55 +119,63 @@
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/a" />
+            android:src="@drawable/a"
+            android:onClick="ProductDetails" />
 
         <ImageView
             android:id="@+id/viewImage2"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/c" />
+            android:src="@drawable/c"
+            android:onClick="ProductDetails" />
 
         <ImageView
             android:id="@+id/viewImage3"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/d" />
+            android:src="@drawable/d"
+            android:onClick="ProductDetails" />
 
         <ImageView
             android:id="@+id/viewImage4"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/e" />
+            android:src="@drawable/e"
+            android:onClick="ProductDetails" />
         <ImageView
             android:id="@+id/viewImage5"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/b" />
+            android:src="@drawable/b" 
+            android:onClick="ProductDetails"/>
 
         <ImageView
             android:id="@+id/viewImage6"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/f" />
+            android:src="@drawable/f"
+            android:onClick="ProductDetails" />
 
         <ImageView
             android:id="@+id/viewImage7"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/g" />
+            android:src="@drawable/g"
+            android:onClick="ProductDetails" />
 
         <ImageView
             android:id="@+id/viewImage8"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:padding="15dp"
-            android:src="@drawable/g" />
+            android:src="@drawable/g"
+            android:onClick="ProductDetails" />
 
     </LinearLayout>
 </HorizontalScrollView>

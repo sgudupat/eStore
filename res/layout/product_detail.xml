@@ -24,7 +24,8 @@
             android:layout_alignParentTop="true"
             android:layout_margin="3dp"
             android:clickable="true"
-            android:src="@drawable/profile" />
+            android:src="@drawable/profile"
+            android:onClick="DestoreProfile" />
 
     </LinearLayout>
 
@@ -119,7 +120,8 @@
              android:layout_height="wrap_content"
              android:layout_below="@+id/pd_layout4"
              android:layout_centerHorizontal="true"
-             android:text="BuyNow" />
+             android:text="BuyNow"
+             android:onClick="PaymentPage" />
      </LinearLayout>
 
 </RelativeLayout>
