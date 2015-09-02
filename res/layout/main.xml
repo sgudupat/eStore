@@ -93,6 +93,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="36dp"
                 android:text="Forget Password"
+                  android:clickable="true"
+                 
                 android:onClick="EstoreForgotPassword" />
 
         </RelativeLayout>
