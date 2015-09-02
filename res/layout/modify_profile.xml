@@ -61,4 +61,13 @@
         android:layout_below="@+id/modify_country"
         android:hint="Pincode" />
 
+    <Button
+        android:id="@+id/modify_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/modify_pincode"
+        android:layout_below="@+id/modify_pincode"
+        android:layout_marginLeft="81dp"
+        android:text="Done" />
+
 </RelativeLayout>
