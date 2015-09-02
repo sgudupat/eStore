@@ -152,7 +152,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/pincode"
             android:layout_centerHorizontal="true"
-            android:onClick="StoreActivity"
+            android:onClick="profile"
             android:text="Update" />
     </RelativeLayout>
 
