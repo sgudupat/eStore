@@ -36,64 +36,6 @@
             android:layout_marginTop="20dp"
             android:text="Create An Account" />
 
-        <EditText
-            android:id="@+id/register_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/register_name"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/register_name"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Email" />
-
-        <EditText
-            android:id="@+id/register_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/register_textview"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/register_textview"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Name" >
-
-            <requestFocus />
-        </EditText>
-
-        <EditText
-            android:id="@+id/register_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/register_email"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/register_email"
-            android:hint="Password"
-            android:ems="10"
-            android:gravity="center" />
-
-        <EditText
-            android:id="@+id/register_confirmpassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/register_password"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/register_password"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Re-Confirm Password" />
-
-        <EditText
-            android:id="@+id/register_mobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/register_confirmpassword"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/register_confirmpassword"
-            android:hint="Mobile"
-            android:ems="10"
-            android:gravity="center" />
-
         <Button
             android:id="@+id/register_button"
             android:layout_width="wrap_content"
@@ -103,6 +45,72 @@
             android:layout_marginTop="14dp"
             android:text="Register"
             android:onClick="EstoreHomePage" />
+
+        <EditText
+            android:id="@+id/register_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/register_accounttag"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Name" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/register_name"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/register_email"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password" />
+
+        <Button
+            android:id="@+id/checked_newanchor1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/register_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/register_button"
+            android:onClick="checkAvailability"
+            android:text="CheckAvaliability" />
+
+        <EditText
+            android:id="@+id/register_confirmpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/register_password"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Re-Confirm Password" />
+
+        <EditText
+            android:id="@+id/register_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/register_confirmpassword"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Mobile" />
 
     </RelativeLayout>
 
