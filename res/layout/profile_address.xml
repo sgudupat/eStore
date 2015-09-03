@@ -53,7 +53,7 @@
              android:text="User Profile" />
 
          <TextView
-             android:id="@+id/profile_name"
+             android:id="@+id/addressprofile_name"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_alignParentLeft="true"
@@ -65,22 +65,22 @@
              android:hint="Name" />
 
          <TextView
-             android:id="@+id/profile_mobile"
+             android:id="@+id/addressprofile_mobile"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_alignLeft="@+id/profile_Email"
+             android:layout_alignLeft="@+id/addressprofile_Email"
              android:layout_alignParentRight="true"
-             android:layout_below="@+id/profile_Email"
+             android:layout_below="@+id/addressprofile_Email"
              android:gravity="center"
              android:hint="Mobile" />
 
          <TextView
-             android:id="@+id/profile_Email"
+             android:id="@+id/addressprofile_Email"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_alignLeft="@+id/profile_name"
+             android:layout_alignLeft="@+id/addressprofile_name"
              android:layout_alignParentRight="true"
-             android:layout_below="@+id/profile_name"
+             android:layout_below="@+id/addressprofile_name"
              android:gravity="center"
              android:hint="Email" />
 
@@ -90,7 +90,8 @@
              android:layout_height="wrap_content"
              android:layout_alignParentBottom="true"
              android:layout_alignParentRight="true"
-             android:text="AddAddress" />
+             android:text="AddAddress"
+             android:onClick="addAddress" />
 
      </RelativeLayout>
 <LinearLayout 

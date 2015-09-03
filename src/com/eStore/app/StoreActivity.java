@@ -34,7 +34,7 @@ public class StoreActivity extends Activity{
 	        }
 	}
 	public void EstoreProfile(View view){
-		Intent intent = new Intent(this,ProfileActivity.class);
+		Intent intent = new Intent(this,ProfileAddressActivity.class);
 		startActivity(intent);
 	}
 	public void ProductDetails (View view){
