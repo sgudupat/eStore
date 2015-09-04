@@ -25,6 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_margin="3dp"
             android:clickable="true"
+            
             android:onClick="EstoreProfile"
             android:src="@drawable/profile" />
     </LinearLayout>
@@ -114,6 +115,7 @@
                     android:layout_height="125dp"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
+                    android:tag="bg"
                     android:visibility="gone" />
 
                 <ImageView
@@ -122,6 +124,7 @@
                     android:layout_height="125dp"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
+                    android:tag="bg"
                     android:visibility="gone" />
 
                 <ImageView
@@ -130,6 +133,7 @@
                     android:layout_height="125dp"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
+                    android:tag="bg"
                     android:visibility="gone" />
 
                 <ImageView
@@ -138,6 +142,7 @@
                     android:layout_height="125dp"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
+                    android:tag="bg"
                     android:visibility="gone" />
 
                 <ImageView
@@ -145,6 +150,7 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:onClick="ProductDetails"
+                    android:tag="bg"
                     android:padding="15dp"
                     android:visibility="gone" />
 
@@ -152,6 +158,7 @@
                     android:id="@+id/viewImag5"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:tag="bg"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
                     android:visibility="gone" />
@@ -160,6 +167,7 @@
                     android:id="@+id/viewImage6"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:tag="bg"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
                     android:visibility="gone" />
@@ -168,6 +176,7 @@
                     android:id="@+id/viewImage7"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:tag="bg"
                     android:onClick="ProductDetails"
                     android:padding="15dp"
                     android:visibility="gone" />

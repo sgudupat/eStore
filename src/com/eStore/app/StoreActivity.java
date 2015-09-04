@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,6 +30,7 @@ import com.eStore.domain.Product;
 
 public class StoreActivity extends Activity implements Runnable{
 	ArrayList<Product> product = new ArrayList<Product>();
+	final Context context=this;
 	private Handler handler = new Handler();  
 	private ProgressDialog dialog;  
 	//String imageName="";
@@ -68,6 +70,7 @@ public class StoreActivity extends Activity implements Runnable{
 			view = (ImageView)findViewById(resId);
 			//imageName=productList.get(i).getImage();
 			view.setImageBitmap(productList.get(i).getTransformedImage());  
+			view.setTag(productList.get(i).getImage());
 			view.setVisibility(View.VISIBLE); 
 			Log.i("view id",""+view );
 			// new Image(imageName,productList).execute();
@@ -110,12 +113,46 @@ public class StoreActivity extends Activity implements Runnable{
 		}  
 	}  
 	public void EstoreProfile(View view){
+		
 		Intent intent = new Intent(this,ProfileAddressActivity.class);
 		startActivity(intent);
 	}
 	public void ProductDetails (View view){
-		Intent intent = new Intent(this,ProductDetailActivity.class);
-		startActivity(intent);
+		String img=(String) view.getTag();
+		Log.i("onclick image name", img);
+		Log.i("size",""+productList.size());
+		for(int i=0;i<productList.size();i++) {
+			if(productList.get(i).getImage().contains(img)){
+				Log.i("code",productList.get(i).getCode());	
+				Log.i("price",productList.get(i).getPrice());			
+				Log.i("image",productList.get(i).getImage());
+				Intent intent = new Intent(this,ProductDetailActivity.class);
+				Bitmap img1 =scaleDownBitmap(productList.get(i).getTransformedImage(), 150, context);
+				intent.putExtra("bitmapImage", img1);
+				intent.putExtra("code",productList.get(i).getCode());
+				intent.putExtra("price",productList.get(i).getPrice());
+				intent.putExtra("category",productList.get(i).getCategory());
+				intent.putExtra("name",productList.get(i).getName());
+				intent.putExtra("specification",productList.get(i).getSpecification());				
+				startActivity(intent);				
+			}
+		}
+		/*Intent intent = new Intent(this,ProductDetailActivity.class);
+		startActivity(intent);*/
+	}
+	private Bitmap scaleDownBitmap(Bitmap photo, int newHeight,
+			Context context) {
+		// TODO Auto-generated method stub
+		
+		final float densityMultiplier = context.getResources().getDisplayMetrics().density;        
+
+		 int h= (int) (newHeight*densityMultiplier);
+		 int w= (int) (h * photo.getWidth()/((double) photo.getHeight()));
+
+		 photo=Bitmap.createScaledBitmap(photo, w, h, true);
+
+		
+		return photo;
 	}
 	private ArrayList<Product> generateData() {
 		String response=productDetail();
