@@ -25,6 +25,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -278,6 +279,21 @@ public class ProfileAddressActivity extends Activity {
 				Log.i("Response 2:Error:", e.getMessage());
 	            Toast.makeText(getApplicationContext(), "Update Failed, Please Retry !!!", Toast.LENGTH_LONG).show();
 			}*/
+	public void delete(View view){
+		 Log.i("addressId", addressId);
+         final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
+         postParameters.add(new BasicNameValuePair("addressId", addressId));
+         
+         try {
+             String response = SimpleHttpClient.executeHttpPost("/deleteAddress", postParameters);
+             Log.i("Response:", response);
+             Intent intent = getIntent();
+             finish();
+             startActivity(intent);
+         } catch (Exception e) {
+             Log.e("register", e.getMessage() + "");
+         }
+	}
 	
 	public void replaceContentView(String id, Intent newIntent) {
         View view = ((ActivityGroup) context).getLocalActivityManager().startActivity(id, newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)).getDecorView();
@@ -286,16 +302,16 @@ public class ProfileAddressActivity extends Activity {
 	public void modify(View view){
 		
 	
-		 
+		
 		 LayoutInflater li = LayoutInflater.from(context);
 	        View addressView = li.inflate(R.layout.add_address, null);
 	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 	        // set prompts.xml to alert dialog builder
 	        alertDialogBuilder.setView(addressView);
-	     
 	        
+	 
 	  
-	        Log.i("session name", addressId);
+	      
 	      
 	        final EditText modifyAddress1 = (EditText) addressView.findViewById(R.id.modify_address1);
 	        final EditText modifyAddress2 =(EditText) addressView.findViewById(R.id.modify_address2);
@@ -303,6 +319,7 @@ public class ProfileAddressActivity extends Activity {
 	        final EditText modifyState=(EditText) addressView.findViewById(R.id.modify_state);
 	        final  EditText modifyCountry=(EditText) addressView.findViewById(R.id.modify_country);
 	        final EditText modifyPincode=(EditText) addressView.findViewById(R.id.modify_pincode);
+	        
 	      /*   SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
 	        addressId=preferences.getString("addressId", "");
 	        String address1=preferences.getString("address1", "");
@@ -337,7 +354,7 @@ public class ProfileAddressActivity extends Activity {
 	            				
 	            				 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 	            	                SharedPreferences.Editor editor = prefs.edit();
-
+	            	                
 	            	                editor.putString("address1", modifyAddress1.getText().toString());
 	            	                editor.putString("address2", modifyAddress2.getText().toString());
 	            	                editor.putString("city", modifyCity.getText().toString());
