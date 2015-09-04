@@ -70,13 +70,6 @@
         android:text="Add Address"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/add_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/modify_pincode"
-        android:layout_centerHorizontal="true"
-        android:onClick="saveAddress"
-        android:text="Save" />
+ 
 
 </RelativeLayout>
