@@ -1,6 +1,8 @@
 package com.eStore.app;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -8,10 +10,13 @@ import org.apache.http.message.BasicNameValuePair;
 
 import com.client.vote.domain.Address;
 
+
 import android.app.Activity;
 import android.app.ActivityGroup;
 import android.content.Context;
 import android.content.Intent;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +30,8 @@ import android.widget.TextView;
 public class AddressAdapter extends BaseAdapter implements ListAdapter {
 	
     private ArrayList<Address> list = new ArrayList<Address>();
-    private Context context;
+    private  final Context context;
+   
 
     public AddressAdapter(ArrayList<Address> list, Context context) {
         this.list = list;
@@ -41,6 +47,7 @@ public class AddressAdapter extends BaseAdapter implements ListAdapter {
     public Object getItem(int pos) {
         return list.get(pos);
     }
+   
 
     public View getView(final int position, View convertView, ViewGroup parent) {
         View view = convertView;
@@ -57,6 +64,16 @@ public class AddressAdapter extends BaseAdapter implements ListAdapter {
         Button delete=(Button) view.findViewById(R.id.address_delete);
         Button edit=(Button) view.findViewById(R.id.address_edit);
         Log.i("delete", ""+delete);
+      /*  edit.setOnClickListener(new AddressListener(
+                list.get(position).getAddress1()
+                , list.get(position).getAddress2()
+                , list.get(position).getCity()
+                , list.get(position).getCountry()
+                , list.get(position).getState()
+                ,list.get(position).getPinCode()));
+      
+        edit.setText((CharSequence) list);*/
+        
        
        
        
@@ -72,6 +89,34 @@ public class AddressAdapter extends BaseAdapter implements ListAdapter {
         
       
        }	
+   /* public class AddressListener implements View.OnClickListener {
+        private String address1;
+        private String address2;
+        private String city;
+        private String state;
+        private String country;
+        private String pinCode;
+
+        public AddressListener(String address1, String address2, String city, String state, String country,String pinCode) {
+            this.address1 = address1;
+            this.address2 = address2;
+            this.city = city;
+            this.state = state;
+            this.country = country;
+            this.pinCode = pinCode;
+        }
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(context, ProfileAddressActivity.class);
+            intent.putExtra("address1", address1);
+            intent.putExtra("address2", address2);
+            intent.putExtra("city", city);
+            intent.putExtra("state", state);
+            intent.putExtra("country", country);
+            intent.putExtra("pinCode", pinCode);
+            context.startActivity(intent);
+        }*/
 
       
 
@@ -80,11 +125,13 @@ public class AddressAdapter extends BaseAdapter implements ListAdapter {
             ((Activity) context).setContentView(view);
         }
 
-		@Override
-		public long getItemId(int position) {
-			// TODO Auto-generated method stub
-			return 0;
-		}
+		
+		
 	  
-    }
-
+    //}
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

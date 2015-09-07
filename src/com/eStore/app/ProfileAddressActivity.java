@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -334,6 +335,23 @@ public class ProfileAddressActivity extends Activity {
 	        modifyState.setText(state);
 	        modifyCountry.setText(country);
 	        modifyPincode.setText(pinCode);*/
+	        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = prefs.edit();
+	        JSONObject jsonObject;
+			try {
+				jsonObject = new JSONObject(response);
+				  editor.putString("address1", (String) jsonObject.get("address1"));
+		            editor.putString("address2", (String) jsonObject.get("address2"));
+		            editor.putString("city", (String) jsonObject.get("city"));
+		            editor.putString("state", (String) jsonObject.get("state"));
+		            editor.putString("country", (String) jsonObject.get("country"));
+		            editor.putString("pinCode", (String) jsonObject.get("pinCode"));
+		            editor.commit();
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+	      
 	        // set dialog message
 	        alertDialogBuilder.setCancelable(false).setPositiveButton("Save",
 	                new DialogInterface.OnClickListener() {
@@ -354,13 +372,13 @@ public class ProfileAddressActivity extends Activity {
 	            				
 	            				 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 	            	                SharedPreferences.Editor editor = prefs.edit();
-	            	                
+	            	                 //JSONObject jsonObject = new JSONObject(response);
 	            	                editor.putString("address1", modifyAddress1.getText().toString());
 	            	                editor.putString("address2", modifyAddress2.getText().toString());
 	            	                editor.putString("city", modifyCity.getText().toString());
 	            	                editor.putString("state", modifyState.getText().toString());
 	            	                editor.putString("country", modifyCountry.getText().toString());
-	            	                editor.putString("pinCode", modifyPincode.getText().toString());
+	            	              editor.putString("pinCode", modifyPincode.getText().toString());
 	            	                
 	            	                editor.commit();
 	            	                
