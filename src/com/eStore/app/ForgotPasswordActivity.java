@@ -101,7 +101,7 @@ public void validateUser(View view)
    	                        Log.i("Response:", response);
    	                     if (response.contains("success")) {
    	                      Log.i("email sending", "email sending");
-   	                      String link = "http://52.74.246.67:8080/eStore"
+   	                      String link = "http://52.76.83.72:8080/eStore"
    	                      		+ "/forgotPassword.jsp?key="
    	                              + value;
    	                      Log.i("password link", link);
