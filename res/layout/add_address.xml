@@ -70,6 +70,14 @@
         android:text="Add Address"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
- 
+    <EditText
+        android:id="@+id/modify_addressid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/modify_pincode"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/modify_pincode"
+        android:hint="AddressId"
+        android:visibility="invisible" />
 
 </RelativeLayout>

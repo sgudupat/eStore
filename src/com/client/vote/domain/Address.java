@@ -11,7 +11,8 @@ public class Address {
 	String state;
 	String country;
 	String pinCode;
-	public Address( String address1, String address2, String city, String state, String country, String pinCode ){
+	String addressId;
+	public Address( String address1, String address2, String city, String state, String country, String pinCode,String addressId ){
 		
 		this.address1=address1;
 		this.address2=address2;
@@ -19,6 +20,7 @@ public class Address {
 		this.state=state;
 		this.country=country;
 		this.pinCode=pinCode;
+		this.addressId=addressId;
 	}
 	public String getAddressInfo() {
 		return addressInfo;
@@ -68,12 +70,19 @@ public class Address {
 	public void setPinCode(String pinCode) {
 		this.pinCode = pinCode;
 	}
+	public String getAddressId() {
+		return addressId;
+	}
+	public void setAddressId(String addressId) {
+		this.addressId = addressId;
+	}
 	@Override
 	public String toString() {
 		return "Address [addressInfo=" + addressInfo + ", username=" + username
 				+ ", address1=" + address1 + ", address2=" + address2
 				+ ", city=" + city + ", state=" + state + ", country="
-				+ country + ", pinCode=" + pinCode + "]";
+				+ country + ", pinCode=" + pinCode + ", addressId=" + addressId
+				+ "]";
 	}
 	
 	

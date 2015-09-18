@@ -26,6 +26,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -172,7 +173,7 @@ public class ProfileAddressActivity extends Activity {
 	    }
 	private String getAddress(String username)
 	{
-		Intent intent= getIntent();
+		
 		Log.i("getAddress", "getAddress");
 		final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
         postParameters.add(new BasicNameValuePair("username", username));
@@ -210,7 +211,9 @@ public class ProfileAddressActivity extends Activity {
              Log.i("listState", listState);
              String ListPincode=jsonobject.getString("pin_code"); 
              Log.i("ListPincode", ListPincode);
-            items.add(new Address(listAddress1,listAddress2,listCity,listCountry,listState,ListPincode));
+             String ListaddressId=jsonobject.getString("address_id"); 
+             Log.i("ListaddressId", ListaddressId);
+            items.add(new Address(listAddress1,listAddress2,listCity,listCountry,listState,ListPincode,ListaddressId));
            
           
          }
@@ -300,28 +303,38 @@ public class ProfileAddressActivity extends Activity {
         View view = ((ActivityGroup) context).getLocalActivityManager().startActivity(id, newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)).getDecorView();
         ((Activity) context).setContentView(view);
     }
-	public void modify(View view){
+	/*public void modify(View view){
 		
 	
-		
+	Log.i("Inside Modify", "try");
+	
+	final Context context= this;
 		 LayoutInflater li = LayoutInflater.from(context);
 	        View addressView = li.inflate(R.layout.add_address, null);
 	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 	        // set prompts.xml to alert dialog builder
 	        alertDialogBuilder.setView(addressView);
-	        
-	 
-	  
-	      
-	      
+	        Intent intent= getIntent();
+	       String address1=intent.getStringExtra("address1");
+	       String address2=intent.getStringExtra("address2");
+	       String city=intent.getStringExtra("city");
+	       String state=intent.getStringExtra("state");
+	       String country=intent.getStringExtra("country");
+	       String pinCode=intent.getStringExtra("pinCode");    	  
 	        final EditText modifyAddress1 = (EditText) addressView.findViewById(R.id.modify_address1);
 	        final EditText modifyAddress2 =(EditText) addressView.findViewById(R.id.modify_address2);
 	        final EditText modifyCity =(EditText) addressView.findViewById(R.id.modify_city);
 	        final EditText modifyState=(EditText) addressView.findViewById(R.id.modify_state);
 	        final  EditText modifyCountry=(EditText) addressView.findViewById(R.id.modify_country);
 	        final EditText modifyPincode=(EditText) addressView.findViewById(R.id.modify_pincode);
+	        modifyAddress1.setText(address1);
+	        modifyAddress2.setText(address2);
+	        modifyCity.setText(city);
+	        modifyState.setText(state);
+	        modifyCountry.setText(country);
+	        modifyPincode.setText(pinCode);
 	        
-	      /*   SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+	         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
 	        addressId=preferences.getString("addressId", "");
 	        String address1=preferences.getString("address1", "");
 	        String address2=preferences.getString("address2", "");
@@ -334,7 +347,7 @@ public class ProfileAddressActivity extends Activity {
 	        modifyCity.setText(city);
 	        modifyState.setText(state);
 	        modifyCountry.setText(country);
-	        modifyPincode.setText(pinCode);*/
+	        modifyPincode.setText(pinCode);
 	        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
             SharedPreferences.Editor editor = prefs.edit();
 	        JSONObject jsonObject;
@@ -356,6 +369,7 @@ public class ProfileAddressActivity extends Activity {
 	        alertDialogBuilder.setCancelable(false).setPositiveButton("Save",
 	                new DialogInterface.OnClickListener() {
 	                    public void onClick(DialogInterface dialog, int id) {
+	                    	
 	                    	  final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 	                    	  postParameters.add(new BasicNameValuePair("addressId", addressId));
 	            			  postParameters.add(new BasicNameValuePair("address1",modifyAddress1.getText().toString()));
@@ -405,7 +419,7 @@ public class ProfileAddressActivity extends Activity {
 	        // show it
 	        alertDialog.show();
 		
-	}
+	}*/
 	}
 	
 	

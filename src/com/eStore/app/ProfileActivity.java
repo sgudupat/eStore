@@ -37,10 +37,7 @@ public class ProfileActivity extends Activity {
 		email=preferences.getString("email", "");
 		/*mobile=preferences.getString("mobile", "");
 		email=preferences.getString("email", "");*/
-		Intent intent = getIntent();
-		name=intent.getStringExtra("username");
-		mobile=intent.getStringExtra("mobile");
-		email=intent.getStringExtra("email");
+		
 		
 		String address1= preferences.getString("address1", "");
 		String address2= preferences.getString("address2", "");
