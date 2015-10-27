@@ -9,5 +9,7 @@
     <string name="product">ProductDetail</string>
     <string name="payment">Payment</string>
     <string name="order">Order Summary</string>
- 
+   <string name="btn_logout_from_google">Sign Out</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+    <string name="btn_sign_in">Google Login</string>
 </resources>

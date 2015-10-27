@@ -1,103 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              
-        >
-          <Space
-                    android:layout_width="fill_parent"
-                    android:layout_height="10px"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="56dp"/>
-        <LinearLayout 
-            android:id="@+id/home_layout"
-             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="vertical"
-            android:gravity="center"
-           >
+    android:id="@+id/estore_relative"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
+    android:orientation="vertical" >
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo" />
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="vertical" >
 
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/home_layout"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center" >
-
-        <EditText
-            android:id="@+id/signin_password"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/signin_name"
-            android:layout_alignParentBottom="true"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Password" />
+            android:src="@drawable/logo" />
 
         <EditText
             android:id="@+id/signin_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:ems="10"
             android:gravity="center"
-            android:hint="Name or Email" >
+            android:hint="Name or Email" />
 
-            <requestFocus />
-        </EditText>
-        
-			 </RelativeLayout>
+        <EditText
+            android:id="@+id/signin_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" 
-            android:layout_gravity="center">
+    </LinearLayout>
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="center" >
 
-            <Button
-                android:id="@+id/home_signin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:onClick="signin"
-                android:layout_marginTop="35dp"
-                android:text="SignIn" />
+        <TextView
+            android:id="@+id/home_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_register"
+            android:layout_toRightOf="@+id/home_signin"
+            android:clickable="true"
+            android:onClick="EstoreForgotPassword"
+            android:text="Forget Password" />
 
-            <Button
-                android:id="@+id/home_register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/home_signin"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="23dp"
-                android:onClick="EstoreRegister"
-                android:text="Register" />
+        <Button
+            android:id="@+id/home_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="22dp"
+            android:layout_toLeftOf="@+id/home_register"
+            android:onClick="signin"
+            android:text="SignIn" />
 
+        <Button
+            android:id="@+id/home_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/home_signin"
+            android:layout_alignBottom="@+id/home_signin"
+            android:layout_alignParentRight="true"
+            android:onClick="EstoreRegister"
+            android:text="Register" />
+
+      </RelativeLayout>
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="#008D28" >
+       <ImageButton
+           android:id="@+id/facebook_image"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/join" />
+
+       <TextView
+           android:id="@+id/facebook_View1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/facebook_image"
+           android:hint="Facebook Login" />
+
+  </RelativeLayout>
+
+<LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:visibility="gone">
+ 
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+ 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="2" >
+ 
             <TextView
-                android:id="@+id/home_view"
+                android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/home_register"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="36dp"
-                android:text="Forget Password"
-                  android:clickable="true"
-                 
-                android:onClick="EstoreForgotPassword" />
+                android:padding="5dp"
+                android:textSize="20dp" />
+ 
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+ 
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center" 
+        android:padding="16dp" >  
+         </RelativeLayout>
+  <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+       android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+  <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_logout_from_google"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"/>
+ 
+    <Button
+        android:id="@+id/btn_revoke_access"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_revoke_access"
+        android:visibility="gone" />
+  
+   
 
-        </RelativeLayout>
+   
 
 </LinearLayout>
-
