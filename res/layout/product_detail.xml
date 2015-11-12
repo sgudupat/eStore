@@ -113,7 +113,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/pd_quantitytagg"
             android:layout_marginTop="14dp"
-            android:hint="BuyNow" />
+            android:hint="BuyNow" 
+            android:onClick="PaymentPage"/>
 
         <Spinner
             android:id="@+id/product_values"
