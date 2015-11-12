@@ -59,7 +59,7 @@
             android:layout_marginRight="62dp"
             android:layout_marginTop="22dp"
             android:layout_toLeftOf="@+id/home_register"
-            android:onClick="signin"
+            android:onClick="signinEstore"
             android:text="SignIn" />
 
         <Button
