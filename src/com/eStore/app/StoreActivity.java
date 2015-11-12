@@ -101,7 +101,7 @@ public class StoreActivity extends Activity implements Runnable{
 				String imageName = productList.get(i).getImage();
 			Log.i("image name",imageName);
 			//downloadedBitmap = DownloadBMP("http://52.74.246.67:8080/images/"+imageName);  
-			URL location = new URL("http://52.74.246.67:8080/images/"+imageName);  
+			URL location = new URL("http://52.76.83.72:8090/"+imageName);  
 			InputStream input_s = location.openStream();         
 			downloadedBitmap = BitmapFactory.decodeStream(input_s);  
 			input_s.close();
