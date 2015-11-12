@@ -25,7 +25,7 @@ public class ProductDetailActivity extends Activity {
 		 textname.setText(name);
 		
 		 
-		ImageView view = (ImageView)findViewById(R.id.viewImage);
+		ImageView view = (ImageView)findViewById(R.id.pd_productimage);
 		view.setImageBitmap(bitmap);
 	}
 	public void PaymentPage(View view){
