@@ -57,8 +57,9 @@
             android:layout_alignBaseline="@+id/button_buynow"
             android:layout_alignBottom="@+id/button_buynow"
             android:layout_marginLeft="41dp"
-            android:layout_toRightOf="@+id/button_buynow"
-            android:hint="Cart" />
+            android:layout_toRightOf="@+id/button_buynow"         
+            android:hint="Add to Cart"
+            android:onClick="addtoCart" />
 
         <ImageButton
             android:id="@+id/pd_productimage"

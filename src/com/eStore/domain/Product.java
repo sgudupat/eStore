@@ -21,6 +21,9 @@ public class Product {
 		this.image = image;
 		this.code = code;
 	}
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getCategory() {
 		return category;
 	}

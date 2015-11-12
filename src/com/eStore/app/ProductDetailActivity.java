@@ -1,5 +1,10 @@
 package com.eStore.app;
 
+import java.util.ArrayList;
+
+import com.eStore.domain.Product;
+import com.eStore.domain.ShoppingCart;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ProductDetailActivity extends Activity {
+	Product product=new Product();
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.product_detail);
@@ -25,6 +31,9 @@ public class ProductDetailActivity extends Activity {
 		 textprice.setText(price);
 		 textinfo.setText(info);
 		 textname.setText(name);
+		 product.setName(name);
+		 product.setPrice(price);
+		 product.setSpecification(info);
 		 Spinner ageView = (Spinner) findViewById(R.id.product_values);
 	        // Create an ArrayAdapter using the string array and a default spinner layout
 	        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.values_array, android.R.layout.simple_spinner_item);
@@ -42,6 +51,14 @@ public class ProductDetailActivity extends Activity {
 	public void PaymentPage(View view){
 		Intent intent = new Intent(this,PaymentActivity.class);
 		startActivity(intent);
+	}
+	public void addtoCart(View view){
+//		Intent intent = new Intent(this,PaymentActivity.class);
+//		startActivity(intent);
+		ArrayList<Product> cart=ShoppingCart.getCart();
+		cart.add(product);
+		
+		
 	}
 	public void DestoreProfile(View view){
 		Intent intent = new Intent(this,ProfileActivity.class);
