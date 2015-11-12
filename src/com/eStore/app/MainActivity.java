@@ -28,35 +28,14 @@ public class MainActivity extends Activity  {
 	   // private Context context;
 		
 	
-	 int images[];
-	LinearLayout linearLayout;
-	public static int count=0;
-	int[] drawablearray=new int[]{R.drawable.bg,R.drawable.image6,R.drawable.image1,R.drawable.image2,R.drawable.image3,R.drawable.image4,R.drawable.image5,R.drawable.image16,R.drawable.image7,R.drawable.image8,R.drawable.image9,R.drawable.image10,R.drawable.image11,R.drawable.image12,R.drawable.image13,R.drawable.image14};
-    /**
-     * Called when the activity is first created.
-     */
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
    
     	
-     new Handler().postDelayed(new Runnable() {
-         public void run() {
-
-            if(count<drawablearray.length){
-
-            	MainActivity.this.getWindow().
-                    setBackgroundDrawableResource(drawablearray[count]);
-                count++;  //<<< increment counter here
-             }
-            else{
-               // reset counter here
-               count=0;
-             }
-
-           }
-       }, 0);
+    
 
 
 
