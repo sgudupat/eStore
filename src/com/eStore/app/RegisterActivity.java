@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -89,6 +90,8 @@ public class RegisterActivity extends Activity {
 	                                editor.putString("email", (String) jsonobject.get("email"));
 	                                editor.putString("mobile", (String) jsonobject.get("mobile"));
 	                                editor.commit();
+	                                Intent intent = new Intent(context, StoreActivity.class);
+	        						startActivity(intent);          
 	                            } catch (Exception e) {
 	                                Log.e("register", e.getMessage() + "");
 	                                Toast.makeText(getApplicationContext(), "Login Failed, Please Retry !!!", Toast.LENGTH_LONG).show();

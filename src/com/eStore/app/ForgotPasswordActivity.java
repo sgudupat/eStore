@@ -98,10 +98,12 @@ public void validateUser(View view)
                          postParameters.add(new BasicNameValuePair("keyValue", value));
                        
                             String response = SimpleHttpClient.executeHttpPost("/updatePasswordKeyValue", postParameters);
+                            Intent intent = new Intent(context, MainActivity.class);
+                            startActivity(intent);
                             Log.i("Response:", response);
                          if (response.contains("success")) {
                           Log.i("email sending", "email sending");
-                          String link = "http://52.76.83.72:8080/eStore"
+                          String link = "http://52.76.83.72:8090/eStore"
                             + "/password.jsp?key="
                                   + value;
                           Log.i("password link", link);
