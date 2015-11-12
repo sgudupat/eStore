@@ -86,16 +86,6 @@
             android:layout_below="@+id/pd_productprice"
             android:layout_marginTop="16dp"
             android:hint="Quantity" />
-          
-
-        <Button
-            android:id="@+id/button_buynow"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/pd_quantitytagg"
-            android:hint="BuyNow" />
 
         <TextView
             android:id="@+id/pd_productinfo"
@@ -115,12 +105,22 @@
             android:gravity="center"
             android:hint="Product Name" />
 
+        <Button
+            android:id="@+id/button_buynow"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/pd_quantitytagg"
+            android:layout_marginTop="14dp"
+            android:hint="BuyNow" />
+
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/product_values"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/pd_quantitytagg"
-            android:layout_toRightOf="@+id/button_buynow" />
+            android:layout_toRightOf="@+id/pd_quantitytagg" />
 
     </RelativeLayout>
 
