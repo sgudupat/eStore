@@ -48,7 +48,7 @@ import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
 
-public class HomeActivity extends Activity implements OnClickListener,
+public class MainActivity extends Activity implements OnClickListener,
 ConnectionCallbacks, OnConnectionFailedListener {
 	 private static final int RC_SIGN_IN = 0;
 	    // Logcat tag
