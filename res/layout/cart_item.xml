@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/b" />
+
+    <TextView
+        android:id="@+id/cartproduct_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="Bucket" />
+
+    <TextView
+        android:id="@+id/cartproduct_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cartproduct_name"
+        android:layout_alignBottom="@+id/cartproduct_name"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/cartproduct_name"
+        android:text="100" />
+
+    <TextView
+        android:id="@+id/cartproduct_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cartproduct_price"
+        android:layout_alignBottom="@+id/cartproduct_price"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/cartproduct_price"
+        android:text="2" />
+
+</RelativeLayout>
